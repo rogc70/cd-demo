@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to the Continuous Delivery demonstration for ISS today!"
+title:  "Welcome to the Continuous Delivery demonstration for ISS today, by Rafa!"
 categories: demo
 ---
 
