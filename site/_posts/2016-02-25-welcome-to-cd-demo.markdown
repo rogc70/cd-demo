@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to the Continuous Delivery demonstration for ISS today, by Rafa!"
+title:  "Welcome to the Continuous Delivery demonstration for Itaú Unibanco"
 categories: demo
 ---
 
