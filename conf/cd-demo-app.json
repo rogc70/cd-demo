@@ -1,12 +1,9 @@
 {
   "env": {
     "JAVA_OPTS": "-Xms256m -Xmx256m",
-    "DATABASE_USER": "root",
     "DATABASE_PASSWORD": "tomcat",
+    "DATABASE_USER": "root",
     "DATABASE_NAME": "tomcat-mysql"
-  },
-  "labels": {
-    "HAPROXY_GROUP": "external"
   },
   "id": "/migrationtool",
   "acceptedResourceRoles": [
@@ -24,15 +21,16 @@
           "VIP_0": "/migrationtool:8080"
         },
         "protocol": "tcp",
-        "servicePort": 10000,
+        "servicePort": 10103,
         "name": "web"
       }
     ],
-    "type": "MESOS",
+    "type": "DOCKER",
     "volumes": [],
     "docker": {
       "image": "tomcat:latest",
       "forcePullImage": false,
+      "privileged": false,
       "parameters": []
     }
   },
@@ -56,7 +54,8 @@
       "timeoutSeconds": 5,
       "delaySeconds": 15,
       "protocol": "HTTP",
-      "path": "/"
+      "path": "/",
+      "ipProtocol": "IPv4"
     }
   ],
   "instances": 1,
@@ -78,5 +77,8 @@
     "inactiveAfterSeconds": 0,
     "expungeAfterSeconds": 0
   },
-  "constraints": []
+  "constraints": [],
+  "labels": {
+    "HAPROXY_GROUP": "external"
+  }
 }
