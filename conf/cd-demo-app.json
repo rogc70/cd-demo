@@ -18,7 +18,7 @@
   "cpus": 0.1,
   "instances": 1,
   "labels": {
-    "HAPROXY_0_VHOST": "ELB_HOSTNAME",
+    "HAPROXY_0_VHOST": "ext-rgonza-Itau-1-1906439192.us-east-1.elb.amazonaws.com",
     "HAPROXY_GROUP": "external",
     "lastChangedBy": "velocity-team@mesosphere.com"
   },
